@@ -74,29 +74,29 @@ class Student extends Member {
 }
 
 void main() {
-  // dataTypes();
-  // breaker();
+  dataTypes();
+  breaker();
 
-  // io();
-  // breaker();
+  io();
+  breaker();
 
-  // operations();
-  // breaker();
+  operations();
+  breaker();
 
-  // controlStructures("Julia");
-  // breaker();
+  controlStructures("Julia");
+  breaker();
 
-  // collections();
-  // breaker();
+  collections();
+  breaker();
 
-  // print('2 squared is ' + square(2).toString());
-  // print('2 squared is ' + shorterSquare(2.5).toString());
-  // breaker();
+  print('2 squared is ' + square(2).toString());
+  print('2 squared is ' + shorterSquare(2.5).toString());
+  breaker();
 
-  // print('10 + 2 = ' + positionalSum(10, 2).toString());
-  // print('10 + 2 = ' + namedSum(10, num2: 2).toString());
-  // print('10 + DEFAULT = ' + namedSum(10).toString());
-  // print('10 + DEFAULT = ' + optionalSum(10).toString());
+  print('10 + 2 = ' + positionalSum(10, 2).toString());
+  print('10 + 2 = ' + namedSum(10, num2: 2).toString());
+  print('10 + DEFAULT = ' + namedSum(10).toString());
+  print('10 + DEFAULT = ' + optionalSum(10).toString());
   breaker();
 
   var person1 = Person("Chinwe", 20, 'cheebebu');

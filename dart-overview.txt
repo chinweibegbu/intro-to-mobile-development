@@ -1,0 +1,40 @@
+Features:
+- Strongly typed
+- Compiled language (AOT, JIT)
+- Uses curly braces and semicolons
+- Comments: // and /**/
+- Documentation: ///
+- Uses camelCase
+- OOP language
+
+Data Types:
+- Types: int, double (for decimals), bool, String
+- You can define a String using single or double quotes
+- An unassigned variable is automatically of type null
+- Operations: 
+    - Operations like *= are allowed
+    - Unary operations are supported e.g. n++ (post-increment) 
+    - There is no // operator for floor division
+    - Null operators
+
+Collections:
+- Lists are defined with []
+- Non-empty sets are defined with {}
+- Empty sets are defined with <Type> {}
+- Empty hash maps are defined with {}
+
+Functions:
+- No return type = Void return type
+- Supports positional and named parameters
+- Named parameters {} (these are optional by default)
+- Optional positional parameters []
+
+Classes:
+- You have to make instance variables nullable in order to leave them undefined at the beginning of your class
+- You can NOT have more than one constructor with the same name
+
+Exception Handling:
+- throw Exception(...)
+- try... on ExceptionName... catch(e)... finally
+- try... on ExceptionName catch(e)... catch(e)... finally
+- try... catch(e)... finally

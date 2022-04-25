@@ -11,19 +11,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+    return MaterialApp(title: 'Flutter Demo', home: HomeScreen());
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(children: [
+        Container(
+          height: 200,
+          width: 200,
+          color: Colors.green,
         ),
-        // Text is a widget
-        home: Scaffold(
-          appBar: AppBar(title: Text("My First Application")),
-          body: Image.network(
-              'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-          ),
-        ));
+        Container(
+          height: 200,
+          width: 200,
+          color: Colors.red,
+        )
+      ]),
+    );
   }
 }

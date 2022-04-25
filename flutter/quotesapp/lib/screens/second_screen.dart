@@ -5,8 +5,17 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: ElevatedButton(
+            child: Text("Go Back"),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
+      ),
     );
   }
 }

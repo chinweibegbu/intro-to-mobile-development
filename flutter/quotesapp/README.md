@@ -1,16 +1,23 @@
 # quotesapp
 
-A new Flutter project.
+A basic Flutter application that fetches and displays insult quotes from [this API](https://evilinsult.com/generate_insult.php?lang=en&type=json).
 
-## Getting Started
+### Resource
+_Flutter & Dart for Beginners: Complete Course [2022 Latest]_ ([Udemy Course link](https://www.udemy.com/course/flutter-latest-course/learn/lecture/31451226#overview))
 
-This project is a starting point for a Flutter application.
+### Tools Employed
+- Visual Studio Code
+- Git
+- Flutter
+- Dart
+- Android Studio
 
-A few resources to get you started if this is your first Flutter project:
+### Skills Learned
+- Basic widgets: Container, Scaffold, Column, Row, Image, Text, Center, Padding, Align, SafeArea
+- Stateless applications
+- Stateful applications and 
+- Screen-to-Screen navigation
+- Dependency manangement
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Run Application
+```flutter run quotesapp```

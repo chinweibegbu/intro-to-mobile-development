@@ -1,17 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:quotesapp/screens/second_screen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String insult = "";
+  String date = "";
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: ElevatedButton(
+        body: Column(children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              insult,
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 2.0),
+            child: Align(alignment: Alignment.bottomRight, child: Text(date)),
+          ),
+          ElevatedButton(
             onPressed: () async {
               // Use an HTTP GET request
               var url = Uri.parse(
@@ -22,19 +40,15 @@ class HomeScreen extends StatelessWidget {
 
               // Parse the JSON data
               var data = jsonDecode(response.body);
-              String insult = (data['insult']);
-              String author = (data['createdby']);
+              insult = (data['insult']);
+              date = (data['created']);
 
-              // Navigate to the SecondScreen dart file
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => SecondScreen(
-                        insultText: insult,
-                        authorName: author,
-                      )));
+              // Reset state
+              setState(() {});
             },
             child: Text("Get Insult"),
           ),
-        ),
+        ]),
       ),
     );
   }
